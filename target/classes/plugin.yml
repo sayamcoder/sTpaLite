@@ -1,0 +1,43 @@
+name: sTpaLite
+version: '1.0'
+main: developer.sayamdev.sTpaLite.STpaLite
+api-version: '1.20'
+prefix: sTpaLite
+authors: [ spacexstudio ]
+description: sTpaLite
+website: https://sayamthrcoder.netlify.app/
+
+commands:
+  tpa:
+    description: Sends a teleport request to a player.
+    usage: /tpa <player>
+  tpahere:
+    description: Asks a player to teleport to you.
+    usage: /tpahere <player>
+  tpaccept:
+    description: Accepts a teleport request.
+    usage: /tpaccept
+  tpdeny:
+    description: Denies a teleport request.
+    usage: /tpdeny
+  tpcancel:
+    description: Cancels your outgoing teleport request.
+    usage: /tpcancel
+  tptoggle:
+    description: Toggles receiving TPA requests.
+    usage: /tptoggle
+  stpalite:
+    description: Admin command for sTpaLite.
+    usage: /stpalite <reload>
+    aliases: [stpa]
+
+permissions:
+  stpalite.command.tpa: {default: true}
+  stpalite.command.tpahere: {default: true}
+  stpalite.command.accept: {default: true}
+  stpalite.command.deny: {default: true}
+  stpalite.command.cancel: {default: true}
+  stpalite.command.toggle: {default: true}
+  stpalite.admin.reload: {default: op}
+  stpalite.bypass.cooldown: {default: op}
+  stpalite.bypass.warmup: {default: op}

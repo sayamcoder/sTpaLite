@@ -1,0 +1,64 @@
+# sTpaLite Configuration
+# Placeholders: {player}, {target}, {time}
+
+# How long (in seconds) a TPA request stays active before expiring.
+request-timeout: 60
+
+# --- Teleport Mechanics ---
+teleport:
+  # The delay (in seconds) before teleporting. Moving cancels it. Set to 0 to disable warmup.
+  warmup: 3
+  # The cooldown (in seconds) after a successful teleport before sending another request.
+  cooldown: 30
+  # Set to true to cancel teleport if player takes damage during warmup.
+  cancel-on-damage: true
+  # Set to true to prevent teleporting to unsafe locations (e.g., in lava, solid blocks).
+  prevent-unsafe-teleport: true
+
+# --- Titles ---
+# Modern on-screen notifications. Set 'enabled' to false to use chat messages only.
+titles:
+  enabled: true
+  # Title shown to the target player.
+  request-received:
+    title: "&a&lᴛᴘᴀ ʀᴇǫᴜᴇѕᴛ"
+    subtitle: "&7ꜰʀᴏᴍ &e{player}"
+  # Title shown during the teleport warmup.
+  warmup-countdown:
+    title: "&eᴛᴇʟᴇᴘᴏʀᴛɪɴɢ..."
+    subtitle: "&7ɪɴ &a{time}s&7. ᴅᴏɴ᾽ᴛ ᴍᴏᴠᴇ!"
+  # Title shown on successful teleport.
+  success:
+    title: "&aѕᴜᴄᴄᴇѕѕ!"
+    subtitle: "&7ʏᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴛᴇʟᴇᴘᴏʀᴛᴇᴅ."
+  # Title shown when a teleport is cancelled.
+  cancelled:
+    title: "&c&lᴄᴀɴᴄᴇʟʟᴇᴅ"
+    subtitle: "&7ʏᴏᴜʀ ᴛᴇʟᴇᴘᴏʀᴛ ᴡᴀѕ ᴄᴀɴᴄᴇʟʟᴇᴅ."
+
+# --- Messages ---
+# All chat messages can be configured here. Use '&' for color codes.
+messages:
+  prefix: "&bѕᴛᴘᴀʟɪᴛᴇ ➔  &7"
+  request-sent: "Teleport request sent to &e{target}&7."
+  request-received: "&e{player} &7has requested to teleport to you. Type &a/tpaccept &7or &c/tpdeny&7."
+  request-here-sent: "You have asked &e{target} &7to teleport to you."
+  request-here-received: "&e{player} &7wants you to teleport to them. Type &a/tpaccept &7or &c/tpdeny&7."
+  no-pending-request: "&cYou have no pending teleport requests."
+  no-outgoing-request: "&cYou have not sent any active TPA requests."
+  request-accepted-sender: "&e{target} &7has accepted. Teleporting in &a{time}s&7..."
+  request-accepted-target: "You accepted the request from &e{player}&7."
+  request-denied-sender: "&c{target} &7denied your request."
+  request-denied-target: "You denied the request from &e{player}&7."
+  request-cancelled-sender: "You have cancelled your teleport request to &e{target}&7."
+  request-cancelled-target: "&e{player} &7has cancelled their teleport request."
+  teleport-cancelled-move: "&cTeleport cancelled because you moved!"
+  teleport-cancelled-damage: "&cTeleport cancelled because you took damage!"
+  cooldown: "&cYou must wait &e{time}s &cbefore sending another request."
+  tpa-toggled-off: "You are no longer accepting TPA requests."
+  tpa-toggled-on: "You are now accepting TPA requests."
+  target-toggled-off: "&cThat player is not accepting TPA requests."
+  cannot-request-self: "&cYou cannot send a TPA request to yourself."
+  reload-success: "Configuration reloaded successfully."
+  player-not-found: "&cPlayer not found."
+  not-a-player: "This command can only be run by a player."

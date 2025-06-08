@@ -1,0 +1,12 @@
+developer\sayamdev\sTpaLite\commands\TpaCommand.class
+developer\sayamdev\sTpaLite\commands\TpaHereCommand.class
+developer\sayamdev\sTpaLite\listeners\PlayerListener.class
+developer\sayamdev\sTpaLite\util\MessageUtil.class
+developer\sayamdev\sTpaLite\STpaLite.class
+developer\sayamdev\sTpaLite\commands\TpCancelCommand.class
+developer\sayamdev\sTpaLite\commands\AdminCommand.class
+developer\sayamdev\sTpaLite\commands\TpDenyCommand.class
+developer\sayamdev\sTpaLite\commands\TpToggleCommand.class
+developer\sayamdev\sTpaLite\TpaManager.class
+developer\sayamdev\sTpaLite\commands\TpAcceptCommand.class
+developer\sayamdev\sTpaLite\TpaManager$1.class
